@@ -1,0 +1,14 @@
+//EXEMPLO-03 - Passar um valor para a função callback
+
+// Recebe um numero e exibe seu dobro.
+function mostrarDobro(valor) {
+console.log(valor * 2);
+}
+
+// Esta funcao recebe DUAS coisas: um valor e uma função.
+function processar(valor, acao) {
+acao(valor); // Executa o callback e entrega o numero a ele.
+}
+processar(5., mostrarDobro);
+// 0 numero*5 chega em processar; depois vai para mostrarDobro.
+// SAÍDA: 10
